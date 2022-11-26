@@ -86,8 +86,8 @@ btnBuscar.addEventListener('click', () => {
     const mtsCMin = +mtsCuadradosMin.value;
     const mtsCMax = +mtsCuadradosMax.value;
 
-    console.log(mtsCMin);
-    console.log(mtsCMax);
+    // console.log(mtsCMin);
+    // console.log(mtsCMax);
 
     listaInmobiliaria.innerHTML = '';
     //Validación de campos vacios
