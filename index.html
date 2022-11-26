@@ -16,19 +16,20 @@
         <nav class="aside-nav">
             <div class="cant-cuartos">
                 <h5>Filtro</h5>
-                <label for=""> Cantidad de cuartos:</label>
+                <label for=""> Cantidad de cuartos (máximos):</label>
                 <input id="nroCuartosUser" type="number" placeholder="1">
             </div>
             <div class="desd-hasta">
                 <p>Metros cuadrados</p>
                 <div class="desd-hasta-container">
-                    <label for=""> Desde:</label>
+                    <label for=""> Desde (6 mts min.):</label>
                     <input id="mtsCuadradosMin" type="number" placeholder="1" >
                     <br>
-                    <label for=""> Hasta:</label>
+                    <label for=""> Hasta (500 mts máx.):</label>
                     <input id="mtsCuadradosMax" type="number" placeholder="1">
                 </div>
-                <button id="btnBuscar">Buscar</button>
+                <button type="button" id="btnBuscar" class="btn btn-dark">Buscar</button>
+                <!-- <button id="btnBuscar">Buscar</button> -->
             </div>
         </nav>
         <main class="main-container">
