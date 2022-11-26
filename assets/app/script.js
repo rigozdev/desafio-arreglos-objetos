@@ -45,7 +45,10 @@ const render = () => {
     //contador inicializa variable para contabilizar la cantidad de elementos a mostrar
     let contador = 0;
     for (const propiedad of propiedades) {
-        if (propiedad.cuartos<=nroCuartosUser.value || propiedad.cuartos==nroCuartosUser.value) {
+        //Validación de cantidad de cuartos (definido para mostrar cantidad de cuartos por debajo de lo solicitado (seleccionando un máximo de cuartos)
+        if (propiedad.cuartos<=nroCuartosUser.value) {
+
+            //Validación de cantidad de metros cuadrados para filtrar
             if (propiedad.metros>=mtsCuadradosMin.value && propiedad.metros<=mtsCuadradosMax.value ) {
                 listaInmobiliaria.innerHTML += `
                 <div class="card" style="width: 15rem;">
@@ -87,10 +90,12 @@ btnBuscar.addEventListener('click', () => {
     console.log(mtsCMax);
 
     listaInmobiliaria.innerHTML = '';
+    //Validación de campos vacios
     if (nroCuartosUser.value == ''|| mtsCuadradosMin.value == '' || mtsCuadradosMax.value=='') {
         alert('Por favor ingrese valores en todos los campos solicitados');
         inicio();
     }else{
+        //Validacion de valores numericos
         if (isNaN(nroCuartosUser.value)|| isNaN(mtsCuadradosMin.value)|| isNaN(mtsCuadradosMax.value)) {
             alert('Ingrese un valor valido por favor');
             inicio();
@@ -103,9 +108,5 @@ btnBuscar.addEventListener('click', () => {
 
 });
 render();
-// console.log(propiedades);
 
-// for (const propiedad of propiedades) {
-//     console.log(propiedad);
-// }
 
