@@ -1,3 +1,5 @@
+@media(max-width:1900px){
+
 *{
     padding: 0px;
     margin: 0px;
@@ -7,7 +9,8 @@
 /* General container */
 .screen{
     display: grid;
-    height: 100vh;
+    /* height: 100vh; */
+    height: auto;
     width: 100%;
     grid-template-columns: 2fr 8fr;
     grid-template-areas: 'aside-nav main-container';
@@ -15,7 +18,8 @@
 
 .aside-nav{
     display: flex;
-    height: 100vh;
+    /* height: 100vh; */
+    height: auto;
     justify-content: flex-start;
     flex-direction: column;
     background-color: #22A39F;
@@ -48,7 +52,8 @@
 }
 
 .cards-container{
-    height: 95vh;
+    /* height: 95vh; */
+    height: auto;    
     width: 100%;
     display: grid;
     padding: 30px;
@@ -96,6 +101,7 @@ input{
 /* Card */
 .card{
     transition: 500ms;
+    height: auto;
 }
 
 .card:hover{
@@ -122,3 +128,136 @@ input{
     margin-right: 2px;
 }
 
+}
+
+
+
+@media(min-width:1901px){
+    *{
+        padding: 0px;
+        margin: 0px;
+        font-family: 'Roboto Mono', monospace;
+    }
+    
+    /* General container */
+    .screen{
+        display: grid;
+        /* height: 100vh; */
+        height: auto;
+        width: 100%;
+        grid-template-columns: 2fr 8fr;
+        grid-template-areas: 'aside-nav main-container';
+    }
+    
+    .aside-nav{
+        display: flex;
+        /* height: 100vh; */
+        height: auto;
+        justify-content: flex-start;
+        flex-direction: column;
+        background-color: #22A39F;
+        align-items: center;
+        grid-area: aside-nav;
+        border-right: 1px solid black;
+    }
+    
+    .main-container{
+        background-color: #22A39F;
+        grid-area: main-container;
+    }
+    
+    /* Main container */
+    
+    .main-container{
+        display: grid;
+        grid-template-rows: 1fr 19fr;
+    
+        grid-template-areas: 'total-area'
+                            'cards-container';
+    }
+    
+    .total{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #22A39F;
+        grid-area: total-area;
+    }
+    
+    .cards-container{
+        /* height: 95vh; */
+        height: 95vh;    
+        width: 100%;
+        display: grid;
+        padding: 30px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 50px;
+        grid-row-gap: 30px;
+        background-color: #22A39F;
+        grid-area: cards-container;
+        
+    }
+    
+    /* Aside */
+    
+    .cant-cuartos{
+        display: flex;
+        flex-direction: column;
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+    
+    .desd-hasta{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .desd-hasta-container{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    input{
+        border-radius: 3px;
+        border: 0px;
+        height: 30px;
+    }
+    
+    
+    /* Card */
+    .card{
+        transition: 500ms;
+        height: auto;
+    }
+    
+    .card:hover{
+        transition: 500ms;
+        transform: scale(1.05, 1.05);
+        box-shadow: 0px 0px 20px 0px white;
+    }
+    
+    .card-body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #F3EFE0;
+        
+    }
+    
+    .cuarto-metro-container{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .card-text{
+        margin-right: 2px;
+    }
+}

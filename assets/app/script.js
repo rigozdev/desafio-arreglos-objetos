@@ -66,7 +66,7 @@ const render = () => {
 
                 //Se utiliza contador para crear el total de elementos mostrados
                 contador++;
-                totalElementos.innerHTML = `<h5>Elementos filtrados: ${contador}</h5>`;
+                totalElementos.innerHTML = `<h5>Elementos encontrados: ${contador}</h5>`;
             }
         }
     }
